@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Bucket
+   uuid = "3E529614-B920-4A14-B841-A8805A4C0ECE"
+   type = "1"
+   version = "2.0">
+   <Breakpoints>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "B4645237-08F5-4D25-8747-81B2E6B45AB8"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "MovieFlix/Views/SwiftUIViews/MovieDetailView.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "136"
+            endingLineNumber = "136"
+            landmarkName = "similarMovies"
+            landmarkType = "24">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "FCEC7EC1-ECD4-4544-8252-77373BA24D18"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "MovieFlix/ViewModels/SwiftUIViewModels/MovieDetailViewModel.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "30"
+            endingLineNumber = "30"
+            landmarkName = "setupMovieData(with:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "FCEC7EC1-ECD4-4544-8252-77373BA24D18 - 35fa3213d3480b2d"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(1) suspend resume partial function for closure #1 @Sendable () async -&gt; () in MovieFlix.MovieDetailViewModel.setupMovieData(with: Swift.Int) -&gt; ()"
+                  moduleName = "MovieFlix"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/bill/Documents/Documents%20-%20Bill%E2%80%99s%20MacBook%20Pro/Dev/MovieFlix/MovieFlix/ViewModels/SwiftUIViewModels/MovieDetailViewModel.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "30"
+                  endingLineNumber = "30"
+                  offsetFromSymbolStart = "92">
+               </Location>
+               <Location
+                  uuid = "FCEC7EC1-ECD4-4544-8252-77373BA24D18 - 3bc04a7a6c3bb907"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(2) await resume partial function for closure #1 @Sendable () async -&gt; () in MovieFlix.MovieDetailViewModel.setupMovieData(with: Swift.Int) -&gt; ()"
+                  moduleName = "MovieFlix"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/bill/Documents/Documents%20-%20Bill%E2%80%99s%20MacBook%20Pro/Dev/MovieFlix/MovieFlix/ViewModels/SwiftUIViewModels/MovieDetailViewModel.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "30"
+                  endingLineNumber = "30"
+                  offsetFromSymbolStart = "56">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+   </Breakpoints>
+</Bucket>
