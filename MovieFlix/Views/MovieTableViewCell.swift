@@ -38,7 +38,7 @@ class MovieTableViewCell: UITableViewCell {
         containerView.rounded(cornerRadius: 16)
         favoriteImage.image = UIImage(named: (data.isFavorite ?? false) ? "Heart" : "Heart_g")
         titleLabel.text = data.title
-        releaseDateLabel.text = data.releaseDate
+        releaseDateLabel.text = formatDate(inputDateString: data.releaseDate ?? "")
         setupContainerAction()
         setupFavoriteAction()
         Task {
@@ -85,8 +85,6 @@ class MovieTableViewCell: UITableViewCell {
 
 
 extension UIImageView {
-    
-    
     func imageFromServerURL(_ URLString: String, placeHolder: UIImage?) {
         
         self.image = nil
@@ -118,4 +116,19 @@ extension UIImageView {
             }).resume()
         }
     }
+}
+
+extension MovieTableViewCell {
+    func formatDate(inputDateString: String) -> String? {
+           let dateFormatter = DateFormatter()
+           dateFormatter.dateFormat = "yyyy-MM-dd"
+           
+           if let inputDate = dateFormatter.date(from: inputDateString) {
+               dateFormatter.dateFormat = "d MMMM yyyy"
+               let formattedDate = dateFormatter.string(from: inputDate)
+               return formattedDate
+           } else {
+               return nil
+           }
+       }
 }

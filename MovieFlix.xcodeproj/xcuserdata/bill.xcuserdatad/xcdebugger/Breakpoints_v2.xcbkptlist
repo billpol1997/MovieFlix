@@ -24,7 +24,7 @@
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
             uuid = "FCEC7EC1-ECD4-4544-8252-77373BA24D18"
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "MovieFlix/ViewModels/SwiftUIViewModels/MovieDetailViewModel.swift"
@@ -65,7 +65,333 @@
                   endingLineNumber = "30"
                   offsetFromSymbolStart = "56">
                </Location>
+               <Location
+                  uuid = "FCEC7EC1-ECD4-4544-8252-77373BA24D18 - 35fa3213d3480b2d"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(1) suspend resume partial function for closure #1 @Sendable () async -&gt; () in MovieFlix.MovieDetailViewModel.setupMovieData(with: Swift.Int) -&gt; ()"
+                  moduleName = "MovieFlix"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/bill/Documents/Documents%20-%20Bill%E2%80%99s%20MacBook%20Pro/Dev/MovieFlix/MovieFlix/ViewModels/SwiftUIViewModels/MovieDetailViewModel.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "30"
+                  endingLineNumber = "30"
+                  offsetFromSymbolStart = "76">
+               </Location>
+               <Location
+                  uuid = "FCEC7EC1-ECD4-4544-8252-77373BA24D18 - 3bc04a7a6c3bb907"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(2) await resume partial function for closure #1 @Sendable () async -&gt; () in MovieFlix.MovieDetailViewModel.setupMovieData(with: Swift.Int) -&gt; ()"
+                  moduleName = "MovieFlix"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/bill/Documents/Documents%20-%20Bill%E2%80%99s%20MacBook%20Pro/Dev/MovieFlix/MovieFlix/ViewModels/SwiftUIViewModels/MovieDetailViewModel.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "30"
+                  endingLineNumber = "30"
+                  offsetFromSymbolStart = "64">
+               </Location>
             </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "44CA0AD2-2D3F-4CEA-B51B-CD6F72D6A327"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "MovieFlix/ViewControllers/HomeScreenViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "57"
+            endingLineNumber = "57"
+            landmarkName = "loadData(page:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "44CA0AD2-2D3F-4CEA-B51B-CD6F72D6A327 - 59381a1adb3c50e1"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(3) suspend resume partial function for closure #1 @Sendable () async -&gt; () in MovieFlix.HomeScreenViewController.loadData(page: Swift.Optional&lt;Swift.Int&gt;) -&gt; ()"
+                  moduleName = "MovieFlix"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/bill/Documents/Documents%20-%20Bill%E2%80%99s%20MacBook%20Pro/Dev/MovieFlix/MovieFlix/ViewControllers/HomeScreenViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "56"
+                  endingLineNumber = "56"
+                  offsetFromSymbolStart = "292">
+               </Location>
+               <Location
+                  uuid = "44CA0AD2-2D3F-4CEA-B51B-CD6F72D6A327 - 59381a1adb3c508e"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(3) suspend resume partial function for closure #1 @Sendable () async -&gt; () in MovieFlix.HomeScreenViewController.loadData(page: Swift.Optional&lt;Swift.Int&gt;) -&gt; ()"
+                  moduleName = "MovieFlix"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/bill/Documents/Documents%20-%20Bill%E2%80%99s%20MacBook%20Pro/Dev/MovieFlix/MovieFlix/ViewControllers/HomeScreenViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "57"
+                  endingLineNumber = "57"
+                  offsetFromSymbolStart = "320">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "0E989F3C-A20C-4032-957F-04D8AFF32CEC"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "MovieFlix/ViewControllers/HomeScreenViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "55"
+            endingLineNumber = "55"
+            landmarkName = "loadData(page:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "0E989F3C-A20C-4032-957F-04D8AFF32CEC - a0132df0c9a18d2d"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(1) suspend resume partial function for closure #1 @Sendable () async -&gt; () in MovieFlix.HomeScreenViewController.loadData(page: Swift.Optional&lt;Swift.Int&gt;) -&gt; ()"
+                  moduleName = "MovieFlix"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/bill/Documents/Documents%20-%20Bill%E2%80%99s%20MacBook%20Pro/Dev/MovieFlix/MovieFlix/ViewControllers/HomeScreenViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "54"
+                  endingLineNumber = "54"
+                  offsetFromSymbolStart = "604">
+               </Location>
+               <Location
+                  uuid = "0E989F3C-A20C-4032-957F-04D8AFF32CEC - d2c3736e91063932"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(2) await resume partial function for closure #1 @Sendable () async -&gt; () in MovieFlix.HomeScreenViewController.loadData(page: Swift.Optional&lt;Swift.Int&gt;) -&gt; ()"
+                  moduleName = "MovieFlix"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/bill/Documents/Documents%20-%20Bill%E2%80%99s%20MacBook%20Pro/Dev/MovieFlix/MovieFlix/ViewControllers/HomeScreenViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "54"
+                  endingLineNumber = "54"
+                  offsetFromSymbolStart = "48">
+               </Location>
+               <Location
+                  uuid = "0E989F3C-A20C-4032-957F-04D8AFF32CEC - 59381a1adb3c5123"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(3) suspend resume partial function for closure #1 @Sendable () async -&gt; () in MovieFlix.HomeScreenViewController.loadData(page: Swift.Optional&lt;Swift.Int&gt;) -&gt; ()"
+                  moduleName = "MovieFlix"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/bill/Documents/Documents%20-%20Bill%E2%80%99s%20MacBook%20Pro/Dev/MovieFlix/MovieFlix/ViewControllers/HomeScreenViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "54"
+                  endingLineNumber = "54"
+                  offsetFromSymbolStart = "152">
+               </Location>
+               <Location
+                  uuid = "0E989F3C-A20C-4032-957F-04D8AFF32CEC - a0132df0c9a18cce"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(1) suspend resume partial function for closure #1 @Sendable () async -&gt; () in MovieFlix.HomeScreenViewController.loadData(page: Swift.Optional&lt;Swift.Int&gt;) -&gt; ()"
+                  moduleName = "MovieFlix"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/bill/Documents/Documents%20-%20Bill%E2%80%99s%20MacBook%20Pro/Dev/MovieFlix/MovieFlix/ViewControllers/HomeScreenViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "55"
+                  endingLineNumber = "55"
+                  offsetFromSymbolStart = "620">
+               </Location>
+               <Location
+                  uuid = "0E989F3C-A20C-4032-957F-04D8AFF32CEC - d2c3736e910638d1"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(2) await resume partial function for closure #1 @Sendable () async -&gt; () in MovieFlix.HomeScreenViewController.loadData(page: Swift.Optional&lt;Swift.Int&gt;) -&gt; ()"
+                  moduleName = "MovieFlix"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/bill/Documents/Documents%20-%20Bill%E2%80%99s%20MacBook%20Pro/Dev/MovieFlix/MovieFlix/ViewControllers/HomeScreenViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "55"
+                  endingLineNumber = "55"
+                  offsetFromSymbolStart = "48">
+               </Location>
+               <Location
+                  uuid = "0E989F3C-A20C-4032-957F-04D8AFF32CEC - 59381a1adb3c50c0"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(3) suspend resume partial function for closure #1 @Sendable () async -&gt; () in MovieFlix.HomeScreenViewController.loadData(page: Swift.Optional&lt;Swift.Int&gt;) -&gt; ()"
+                  moduleName = "MovieFlix"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/bill/Documents/Documents%20-%20Bill%E2%80%99s%20MacBook%20Pro/Dev/MovieFlix/MovieFlix/ViewControllers/HomeScreenViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "55"
+                  endingLineNumber = "55"
+                  offsetFromSymbolStart = "172">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "CB6ACC03-5156-4EE5-A6FA-E6217DF69A32"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "MovieFlix/ViewControllers/HomeScreenViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "60"
+            endingLineNumber = "60"
+            landmarkName = "loadData(page:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "CB6ACC03-5156-4EE5-A6FA-E6217DF69A32 - a0132df0c9a18c42"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(1) suspend resume partial function for closure #1 @Sendable () async -&gt; () in MovieFlix.HomeScreenViewController.loadData(page: Swift.Optional&lt;Swift.Int&gt;) -&gt; ()"
+                  moduleName = "MovieFlix"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/bill/Documents/Documents%20-%20Bill%E2%80%99s%20MacBook%20Pro/Dev/MovieFlix/MovieFlix/ViewControllers/HomeScreenViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "59"
+                  endingLineNumber = "59"
+                  offsetFromSymbolStart = "452">
+               </Location>
+               <Location
+                  uuid = "CB6ACC03-5156-4EE5-A6FA-E6217DF69A32 - ef6ed54b7f20845b"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(4) await resume partial function for closure #1 @Sendable () async -&gt; () in MovieFlix.HomeScreenViewController.loadData(page: Swift.Optional&lt;Swift.Int&gt;) -&gt; ()"
+                  moduleName = "MovieFlix"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/bill/Documents/Documents%20-%20Bill%E2%80%99s%20MacBook%20Pro/Dev/MovieFlix/MovieFlix/ViewControllers/HomeScreenViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "59"
+                  endingLineNumber = "59"
+                  offsetFromSymbolStart = "48">
+               </Location>
+               <Location
+                  uuid = "CB6ACC03-5156-4EE5-A6FA-E6217DF69A32 - d2e5068cd4882456"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(5) suspend resume partial function for closure #1 @Sendable () async -&gt; () in MovieFlix.HomeScreenViewController.loadData(page: Swift.Optional&lt;Swift.Int&gt;) -&gt; ()"
+                  moduleName = "MovieFlix"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/bill/Documents/Documents%20-%20Bill%E2%80%99s%20MacBook%20Pro/Dev/MovieFlix/MovieFlix/ViewControllers/HomeScreenViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "59"
+                  endingLineNumber = "59"
+                  offsetFromSymbolStart = "64">
+               </Location>
+               <Location
+                  uuid = "CB6ACC03-5156-4EE5-A6FA-E6217DF69A32 - a0132df0c9a18c63"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(1) suspend resume partial function for closure #1 @Sendable () async -&gt; () in MovieFlix.HomeScreenViewController.loadData(page: Swift.Optional&lt;Swift.Int&gt;) -&gt; ()"
+                  moduleName = "MovieFlix"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/bill/Documents/Documents%20-%20Bill%E2%80%99s%20MacBook%20Pro/Dev/MovieFlix/MovieFlix/ViewControllers/HomeScreenViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "60"
+                  endingLineNumber = "60"
+                  offsetFromSymbolStart = "428">
+               </Location>
+               <Location
+                  uuid = "CB6ACC03-5156-4EE5-A6FA-E6217DF69A32 - ef6ed54b7f20847a"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(4) await resume partial function for closure #1 @Sendable () async -&gt; () in MovieFlix.HomeScreenViewController.loadData(page: Swift.Optional&lt;Swift.Int&gt;) -&gt; ()"
+                  moduleName = "MovieFlix"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/bill/Documents/Documents%20-%20Bill%E2%80%99s%20MacBook%20Pro/Dev/MovieFlix/MovieFlix/ViewControllers/HomeScreenViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "60"
+                  endingLineNumber = "60"
+                  offsetFromSymbolStart = "48">
+               </Location>
+               <Location
+                  uuid = "CB6ACC03-5156-4EE5-A6FA-E6217DF69A32 - d2e5068cd4882477"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(5) suspend resume partial function for closure #1 @Sendable () async -&gt; () in MovieFlix.HomeScreenViewController.loadData(page: Swift.Optional&lt;Swift.Int&gt;) -&gt; ()"
+                  moduleName = "MovieFlix"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/bill/Documents/Documents%20-%20Bill%E2%80%99s%20MacBook%20Pro/Dev/MovieFlix/MovieFlix/ViewControllers/HomeScreenViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "60"
+                  endingLineNumber = "60"
+                  offsetFromSymbolStart = "64">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "B74B04F2-1AF4-42FF-84F9-30C1B34E42FB"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "MovieFlix/ViewModels/HomeScreenViewModel.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "26"
+            endingLineNumber = "26"
+            landmarkName = "fetchPopularMovies(with:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "55F5EDB2-090C-4202-B039-92A8AA0DCBA8"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "MovieFlix/ViewControllers/HomeScreenViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "59"
+            endingLineNumber = "59"
+            landmarkName = "loadData(page:)"
+            landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>

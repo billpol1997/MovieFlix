@@ -21,16 +21,20 @@ final class HomeScreenViewModel {
     
     func fetchPopularMovies(with page: Int? = nil) async {
         do {
-            let data = try await manager.fetchMovieList()
+            let data = try await manager.fetchMovieList(page: page)
             if page != nil {
-                let extaMovies = dataFactory.transformMovieData(with: data)
-                self.popularMovies?.append(contentsOf: extaMovies)
+                let extraMovies = dataFactory.transformMovieData(with: data)
+                if popularMovies != nil {
+                    self.popularMovies?.append(contentsOf: extraMovies)
+                } else {
+                    self.popularMovies = extraMovies
+                }
                 self.page += 1
             } else {
                 self.popularMovies = dataFactory.transformMovieData(with: data)
                 self.page = 1
             }
-           // loadedlist.send()
+            // loadedlist.send()
         } catch {
             print("Error fetching movie list: \(error)")
         }
@@ -55,7 +59,7 @@ final class HomeScreenViewModel {
         favoriteMovies.removeAll(where: {$0 == id})
         UserDefaults.standard.set(favoriteMovies, forKey: "Favorites")
     }
-
+    
     func loadFavorites(to array: [MovieTableViewCellModel]) -> [MovieTableViewCellModel] {
         if let favorites = UserDefaults.standard.array(forKey: "Favorites") as? [Int] {
             array.map { item in

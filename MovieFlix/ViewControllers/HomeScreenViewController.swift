@@ -26,6 +26,7 @@ class HomeScreenViewController: UIViewController, MovieTableViewDelegate, UIText
     private var moviesDataSource: MovieTableViewDataSource!
     private var cancellables: Set<AnyCancellable> = []
     private let refresh = UIRefreshControl()
+    private var debounceWorkItem: DispatchWorkItem?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -39,8 +40,8 @@ class HomeScreenViewController: UIViewController, MovieTableViewDelegate, UIText
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
-//        tableView.isSkeletonable = true
-//        tableView.showSkeleton(usingColor: .darkClouds, transition: .crossDissolve(2))
+        //        tableView.isSkeletonable = true
+        //        tableView.showSkeleton(usingColor: .darkClouds, transition: .crossDissolve(2))
         
     }
     
@@ -49,15 +50,16 @@ class HomeScreenViewController: UIViewController, MovieTableViewDelegate, UIText
             guard let self else { return }
             do {
                 if page != nil {
-                    try await viewModel.fetchPopularMovies(with: page)
+                    guard let page else { return }
+                    let nextPage = page + 1
+                     await viewModel.fetchPopularMovies(with: nextPage)
+                    guard let extraData = self.viewModel.popularMovies else { return }
+                    self.moviesDataSource.data.append(contentsOf: extraData)
                     tableView.reloadData()
                 } else {
-                    try await viewModel.fetchPopularMovies()
+                     await viewModel.fetchPopularMovies()
                     configureTableView()
                 }
-            } catch {
-                // Handle the error as needed
-                print("Error fetching popular movies: \(error)")
             }
         }
     }
@@ -70,7 +72,6 @@ class HomeScreenViewController: UIViewController, MovieTableViewDelegate, UIText
     
     private func setupSearchBarUI() {
         searchBarView.rounded(cornerRadius: 8)
-        //TODO: do the rest
     }
     
     private func setupTableViewUI() {
@@ -91,8 +92,8 @@ class HomeScreenViewController: UIViewController, MovieTableViewDelegate, UIText
             let favoriteMovies = viewModel.loadFavorites(to: data)
             moviesDataSource = MovieTableViewDataSource(delegate: self, data: favoriteMovies)
             tableView.dataSource = moviesDataSource
-//            tableView.stopSkeletonAnimation()
-//            self.view.hideSkeleton()
+            //            tableView.stopSkeletonAnimation()
+            //            self.view.hideSkeleton()
             tableView.reloadData()
             setupObservers()
         }
@@ -140,25 +141,18 @@ class HomeScreenViewController: UIViewController, MovieTableViewDelegate, UIText
         Task { [weak self] in
             guard let self else { return }
             do {
-                try await viewModel.searchMovie(with: text)
+                 await viewModel.searchMovie(with: text)
                 if let data = viewModel.searchResults {
                     let favoriteMovies = viewModel.loadFavorites(to: data)
                     moviesDataSource = MovieTableViewDataSource(delegate: self, data: favoriteMovies)
                     tableView.dataSource = moviesDataSource
                     tableView.reloadData()
                 }
-            } catch {
-                // Handle the error as needed
-                print("Error fetching popular movies: \(error)")
             }
         }
     }
     
-    func showDetails(with id: Int) {
-        let detailsVC = HostingController(rootView: MovieDetailView(viewModel: MovieDetailViewModel(with: id)))
-        detailsVC.navigationItem.title = ""
-        navigationController?.pushViewController(detailsVC, animated: true)
-    }
+ 
     
     //MARK: UITextFieldDelegate
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
@@ -182,10 +176,32 @@ class HomeScreenViewController: UIViewController, MovieTableViewDelegate, UIText
         let contentOffsetY = scrollView.contentOffset.y
         let contentHeight = scrollView.contentSize.height
         let screenHeight = scrollView.frame.size.height
-        let threshold = Int(screenHeight * 0.2)
+        let threshold = Int(screenHeight * 0.4)
         
-        if contentOffsetY > contentHeight - screenHeight - CGFloat(threshold) {
-            loadData(page: viewModel.page + 1)
+        let distanceToBottom = contentHeight - contentOffsetY - screenHeight
+        
+        if distanceToBottom < CGFloat(threshold) {
+            debounceWorkItem?.cancel()
+            debounceWorkItem = DispatchWorkItem { [weak self] in
+                guard let self else { return }
+                self.loadData(page: self.viewModel.page)
+            }
+            
+            DispatchQueue.main.asyncAfter(deadline: .now() + 0.33, execute: debounceWorkItem!)
+            
         }
+    }
+}
+
+extension HomeScreenViewController {
+    func showDetails(with id: Int) {
+        if let existingVC = navigationController?.viewControllers.first(where: { $0 is HostingController }) {
+            navigationController?.popToViewController(existingVC, animated: true)
+            return
+        }
+        
+        let detailsVC = HostingController(rootView: MovieDetailView(viewModel: MovieDetailViewModel(with: id)))
+        detailsVC.navigationItem.title = "Movie Details"
+        navigationController?.pushViewController(detailsVC, animated: true)
     }
 }
