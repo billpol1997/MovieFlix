@@ -8,6 +8,9 @@
 import Foundation
 import Alamofire
 
+//Global variable for image path
+let imagePath = "https://image.tmdb.org/t/p/w500"
+
 final class NetworkManager {
     let networkService = GenericAPICall()
     let accessToken = "eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiIwZjIyYzdiMDBjNTdlYTk2N2ZhMTg5ZGFmZDk2MzA3NiIsInN1YiI6IjY0NTM5NDY4ZDQ4Y2VlMDBmY2VkZTY5YSIsInNjb3BlcyI6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uIjoxfQ.S-sRwU7SB8gnT_3RYSC-6Hm48jEP3Hd6eHiHKTz13nA"

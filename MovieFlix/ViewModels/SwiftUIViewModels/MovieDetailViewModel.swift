@@ -9,7 +9,7 @@ import Foundation
 import UIKit
 
 final class MovieDetailViewModel: ObservableObject {
-   
+    
     private var manager = NetworkManager()
     private var dataFactory = DataFactory()
     private (set) var detail: MovieDetailModel?
@@ -27,9 +27,7 @@ final class MovieDetailViewModel: ObservableObject {
     func setupMovieData(with id: Int) {
         Task {
             do {
-                try await fetchMovieData(with: id)
-            } catch {
-                
+                await fetchMovieData(with: id)
             }
         }
     }
@@ -111,5 +109,4 @@ final class MovieDetailViewModel: ObservableObject {
         let activityController = UIActivityViewController(activityItems: [url], applicationActivities: nil)
         UIApplication.shared.windows.first?.rootViewController!.present(activityController, animated: true, completion: nil)
     }
-
 }

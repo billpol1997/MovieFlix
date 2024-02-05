@@ -13,16 +13,6 @@ private var tappableKey : UInt8 = 0
 private var actionKey : UInt8 = 1
 
 extension UIView {
-    
-    /// !! **Warning** !!
-    ///
-    /// Use it always with weak reference assigned value due to OBJC_ASSOCIATION_RETAIN_NONATOMIC is strong reference
-    ///
-    /// ````
-    /// view.didTapped = { [weak self] in
-    ///     self?......
-    /// }
-    ///
     var didTapped: SimpleClosure? {
         get {
             return objc_getAssociatedObject(self, &actionKey) as? SimpleClosure
@@ -78,7 +68,7 @@ extension UIView {
             self.addGestureRecognizer(globalGesture)
         }
     }
-
+    
     @objc private func tapped() {
         guard tappable else { return }
         self.isUserInteractionEnabled = false
@@ -118,7 +108,6 @@ extension UIView: BounceView {
 struct BounceAnimation: ViewEffectAnimatorType {
     
     let animator: UIViewPropertyAnimator
-   // private let hapticManager = HapticFeedbackManager()
     
     init(targetView: UIView, onComplete: @escaping ViewEffectAnimatorComplete, scaleSize: CGFloat, duration: TimeInterval) {
         self.init(targetView: targetView, onComplete: onComplete, duration: 0.1)
@@ -147,13 +136,11 @@ struct BounceAnimation: ViewEffectAnimatorType {
             upAnimator.addCompletion(onComplete)
             upAnimator.startAnimation()
         }
-        //withFeedback ?> self.hapticManager.lightHaptics()
     }
 }
 
 struct ScaleAnimation: ViewEffectAnimatorType {
     let animator: UIViewPropertyAnimator
-    //private let hapticManager = HapticFeedbackManager()
     
     init(targetView: UIView, onComplete: @escaping ViewEffectAnimatorComplete, scaleSize: CGFloat, duration: TimeInterval) {
         let downAnimationTiming = UISpringTimingParameters(dampingRatio: 0.9, initialVelocity: CGVector(dx: 20, dy: 0))
@@ -170,7 +157,6 @@ struct ScaleAnimation: ViewEffectAnimatorType {
             upAnimator.addCompletion(onComplete)
             upAnimator.startAnimation()
         }
-        //self.hapticManager.lightHaptics()
     }
     init(targetView: UIView, onComplete: @escaping ViewEffectAnimatorComplete) {
         self.init(targetView: targetView, onComplete: onComplete, scaleSize: 0.95, duration: 0.1)

@@ -25,8 +25,8 @@ struct DetailModel {
     init(details: MovieDetailModel, reviews: MovieReviewsModel) {
         self.id = details.id
         self.title = details.title
-        self.banner = "https://image.tmdb.org/t/p/w500" + (details.backdrop_path ?? "")
-        self.poster = "https://image.tmdb.org/t/p/w500" + (details.poster_path ?? "")
+        self.banner = imagePath + (details.backdrop_path ?? "")
+        self.poster = imagePath + (details.poster_path ?? "")
         self.genres = details.genres?.map { $0.name ?? ""}.joined(separator: ", ") ?? ""
         self.description = details.overview
         self.releaseDate = details.release_date

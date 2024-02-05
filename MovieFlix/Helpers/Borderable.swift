@@ -24,12 +24,7 @@ struct ViewShadowConfig {
 }
 
 protocol Borderable {
-    
-    /// A UIView with border line around it
-    ///
-    /// - Parameters:
-    ///   - color: The color of border line
-    ///   - borderWidth: The size of border line
+
     func bordered(color: UIColor, borderWidth: CGFloat)
     
     func bordered(color: UIColor, borderWidth: CGFloat, withPadding: CGFloat)
@@ -47,11 +42,6 @@ protocol Borderable {
 
 extension Borderable where Self: UIView {
     
-    /// A UIView with border line around it
-    ///
-    /// - Parameters:
-    ///   - color: The color of border line, the default is white
-    ///   - borderWidth: The size of border line, the default is 2.0
     func bordered(color: UIColor = UIColor.white, borderWidth: CGFloat = 1.0) {
         self.layer.borderColor = color.cgColor
         self.layer.borderWidth = borderWidth

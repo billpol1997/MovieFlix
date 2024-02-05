@@ -29,14 +29,14 @@ struct MovieAttributesView: View {
                     .foregroundColor(.blue)
                     .font(.caption)
                     .fontWeight(.bold)
-                Text(detail.setupRuntime()) 
+                Text(detail.setupRuntime())
                     .foregroundColor(.orange)
                     .font(.footnote)
                     .fontWeight(.bold)
             }
             Spacer()
         }
-       
+        
     }
     
     var description: some View {

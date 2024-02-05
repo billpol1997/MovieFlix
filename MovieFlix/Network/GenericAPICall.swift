@@ -17,7 +17,8 @@ class GenericAPICall {
                 case .success(let value):
                     continuation.resume(returning: value)
                 case .failure(let error):
-                    continuation.resume(throwing: error)                }
+                    continuation.resume(throwing: error)
+                }
             }
         }
     }

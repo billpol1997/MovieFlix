@@ -52,12 +52,12 @@ class HomeScreenViewController: UIViewController, MovieTableViewDelegate, UIText
                 if page != nil {
                     guard let page else { return }
                     let nextPage = page + 1
-                     await viewModel.fetchPopularMovies(with: nextPage)
+                    await viewModel.fetchPopularMovies(with: nextPage)
                     guard let extraData = self.viewModel.popularMovies else { return }
                     self.moviesDataSource.data.append(contentsOf: extraData)
                     tableView.reloadData()
                 } else {
-                     await viewModel.fetchPopularMovies()
+                    await viewModel.fetchPopularMovies()
                     configureTableView()
                 }
             }
@@ -141,7 +141,7 @@ class HomeScreenViewController: UIViewController, MovieTableViewDelegate, UIText
         Task { [weak self] in
             guard let self else { return }
             do {
-                 await viewModel.searchMovie(with: text)
+                await viewModel.searchMovie(with: text)
                 if let data = viewModel.searchResults {
                     let favoriteMovies = viewModel.loadFavorites(to: data)
                     moviesDataSource = MovieTableViewDataSource(delegate: self, data: favoriteMovies)
@@ -152,7 +152,7 @@ class HomeScreenViewController: UIViewController, MovieTableViewDelegate, UIText
         }
     }
     
- 
+    
     
     //MARK: UITextFieldDelegate
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {

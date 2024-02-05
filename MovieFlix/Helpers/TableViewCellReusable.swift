@@ -27,22 +27,17 @@ extension UITableViewCell {
 }
 
 extension UITableViewCell: TableViewCellReusable {
-    static var cellIdentifier: String { return String("\(self)Identifier") } //TODO: set to custom identifier if provided
+    static var cellIdentifier: String { return String("\(self)Identifier") }
     static var nibIdentifier: String { return String(describing: Self.self) }
     
     class func dequeueInTableView(_ tableView: UITableView, forIndexPath: IndexPath) -> Self {
         return dequeueInTableView(tableView, forIndexPath: forIndexPath, type: self, identifier: self.cellIdentifier)
     }
     
-    /// Allow for a cell  to be dequed based on an identifier, not the indexPath. This allows a cell to be unique and not reused
-    ///
-    /// - Warning: **!!!! Make sure this cell's XIB doesn't have a identifier set as usual**
-    /// * will crash with error: 'cell reuse indentifier in nib does not match the identifier used to register the nib'
-    /// - Parameter identifier: the unique identifier of this cell (for example: betContextId)
     class func dequeueInTableView(_ tableView: UITableView, forIndexPath: IndexPath, identifier: String?) -> Self {
         var cellIdentifier: String!
         if let id = identifier {
-           cellIdentifier = String("\(self.cellIdentifier)-\(id)")
+            cellIdentifier = String("\(self.cellIdentifier)-\(id)")
         } else {
             cellIdentifier = self.cellIdentifier
         }

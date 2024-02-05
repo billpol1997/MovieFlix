@@ -16,7 +16,6 @@ final class HomeScreenViewModel {
     private (set) var popularMovies: [MovieTableViewCellModel]?
     private (set) var searchResults: [MovieTableViewCellModel]?
     private (set) var favoriteMovies: [Int] = UserDefaults.standard.array(forKey: "Favorites") as? [Int] ?? []
-    let loadedlist = PassthroughSubject<Void, Never>()
     var page: Int = 0
     
     func fetchPopularMovies(with page: Int? = nil) async {
@@ -34,7 +33,6 @@ final class HomeScreenViewModel {
                 self.popularMovies = dataFactory.transformMovieData(with: data)
                 self.page = 1
             }
-            // loadedlist.send()
         } catch {
             print("Error fetching movie list: \(error)")
         }
@@ -44,7 +42,6 @@ final class HomeScreenViewModel {
         do {
             let data = try await manager.searchDataBase(with: keyword)
             self.searchResults = dataFactory.transformMovieData(with: data)
-            //loadedlist.send()
         } catch {
             print("Error fetching movie list: \(error)")
         }

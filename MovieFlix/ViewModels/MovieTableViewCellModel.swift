@@ -18,7 +18,7 @@ final class MovieTableViewCellModel {
     init(model: MovieListResultsModel) {
         self.id = model.id
         self.title = model.title
-        self.banner = "https://image.tmdb.org/t/p/w500" + (model.backdrop_path ?? "")
+        self.banner = imagePath + (model.backdrop_path ?? "")
         self.releaseDate = model.release_date
         self.vote = "\(String(describing: model.vote_average))"
         self.isFavorite = false

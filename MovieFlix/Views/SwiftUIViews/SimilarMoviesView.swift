@@ -44,7 +44,7 @@ struct SimilarMoviesView: View {
     }
     
     func movieTile(model: MovieDetailModel) -> some View {
-        KFImage(URL(string: "https://image.tmdb.org/t/p/w500" + (model.poster_path ?? "")))
+        KFImage(URL(string: imagePath + (model.poster_path ?? "")))
             .resizable()
             .frame(width: 100, height: 150)
             .cornerRadius(4)

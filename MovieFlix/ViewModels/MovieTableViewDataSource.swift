@@ -28,7 +28,6 @@ final class MovieTableViewDataSource: NSObject, UITableViewDataSource, UITableVi
         self.delegate = delegate
         self.data = data
         super.init()
-        // setupObservers()
     }
     
     func numberOfSections(in tableView: UITableView) -> Int {
