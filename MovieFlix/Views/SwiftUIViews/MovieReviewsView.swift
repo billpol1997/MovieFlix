@@ -8,7 +8,6 @@
 import SwiftUI
 
 struct MovieReviewsView: View {
-    var emptya: [String] = []
     var model: [ReviewModel]
     
     var body: some View {

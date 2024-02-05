@@ -124,8 +124,8 @@ struct MovieDetailView: View {
     
     @ViewBuilder
     var reviews: some View {
-        if let model = viewModel.movie?.reviews {
-            MovieReviewsView(model: model)
+        if let model = viewModel.movie?.reviews, let reviews = viewModel.movie?.transformReviews(with: model) {
+            MovieReviewsView(model: reviews)
         }
     }
     

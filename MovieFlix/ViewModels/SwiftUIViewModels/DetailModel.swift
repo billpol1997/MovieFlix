@@ -77,4 +77,9 @@ struct DetailModel {
             return nil
         }
     }
+    
+    func transformReviews(with reviews: [ReviewModel]) -> [ReviewModel] {
+        let slice = reviews.prefix(2)
+        return Array(slice)
+    }
 }
