@@ -187,7 +187,7 @@ class HomeScreenViewController: UIViewController, MovieTableViewDelegate, UIText
                 self.loadData(page: self.viewModel.page)
             }
             
-            DispatchQueue.main.asyncAfter(deadline: .now() + 0.33, execute: debounceWorkItem!)
+            DispatchQueue.main.asyncAfter(deadline: .now() + 0.2, execute: debounceWorkItem!)
             
         }
     }
